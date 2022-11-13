@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+<body>
+    
+    <form method="post">{% csrf_token%}
+        ¿Estás seguro que deseas borrar el libro "{{ object.titulo }}"" de "{{ object.autor }}"? <br>
+        <input type="submit" value="Borrar" />
+    </form>
+    <p>
+        <a href="{% url 'List' %}">Regresar</a>
+    </p>
+
+
+</body>
+
+</html>
+{% endblock %}

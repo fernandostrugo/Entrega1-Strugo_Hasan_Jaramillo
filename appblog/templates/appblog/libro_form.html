@@ -1,0 +1,17 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+<body>
+    <form method="post">
+        {% csrf_token%}
+        {{ form.as_p }}
+        <input type="submit" value="Editar" />
+    </form>
+    <p>
+        <a href="{% url 'List' %}">Regresar</a>
+    </p>
+
+</body>
+
+</html>
+{% endblock %}

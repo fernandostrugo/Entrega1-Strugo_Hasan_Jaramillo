@@ -1,0 +1,21 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    {% if miFormulario2.errors %}
+        <p style="color: red;"> Estan mal los datos </p>
+    {% endif %}
+    <form action="" method="POST">{% csrf_token %}
+    
+        <h1><u>Añadir comentarista:</u></h1>
+        <table>
+            {{ miFormulario2.as_table }}
+        </table>
+
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
+</body>
+
+</html> 

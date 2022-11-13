@@ -1,0 +1,20 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Comentarios creados:</u></h1>
+
+    {% for comment in comments %}
+        <p>Id: {{comment.id}}</p> 
+        <p>Creado por: {{comment.creador}} </p>
+        <p>Publicación: {{comment.texto}} </p>   
+        <p>Fecha de creación: {{comment.fechaCreacion}} </p>
+        <hr/>
+        <br>
+    {% endfor %}
+
+{% endblock %}
+</body>
+
+</html> 

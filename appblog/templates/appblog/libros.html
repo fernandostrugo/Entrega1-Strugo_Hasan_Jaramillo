@@ -1,0 +1,21 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Lista de Libros registrados:</u></h1>
+        
+        {% for book in books %}
+            <p>Titulo: {{book.titulo}} </p> 
+            <p>Autor:{{book.autor}} </p>
+            <p>Genero:{{book.genero}} </p>   
+            <p>Fecha de ingreso:{{book.fechaIngreso}} </p>
+            <hr/>
+
+            <br>
+        {% endfor %}
+
+{% endblock %}
+</body>
+
+</html> 

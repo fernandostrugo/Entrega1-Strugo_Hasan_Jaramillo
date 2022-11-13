@@ -1,0 +1,19 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit"> Iniciar Sesión</button>
+        <a style="color:#FF0000" href="{% url 'registrar' %}">Registrarse</a>
+    </form>
+{% endblock %}
+</body>
+
+</html> 
+
+
+
+

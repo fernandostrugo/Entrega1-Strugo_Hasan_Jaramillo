@@ -1,0 +1,14 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<form action={% url 'cambiar_contrasenia' %} method="POST">
+    {% csrf_token %}
+    <table>
+        {{form}}
+    </table>
+    <button>Cambiar</button>
+</form>
+{%endblock%}
+
+</html> 

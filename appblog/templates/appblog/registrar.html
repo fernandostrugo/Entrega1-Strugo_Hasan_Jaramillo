@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+<body>
+    <form action={% url 'registrar' %} method="POST">
+        {% csrf_token %}
+        <h1> Registrar nuevo usuario: </h1>
+
+        <table>
+            {{formulario}}
+        </table>
+        <button>Registrarse</button>
+    </form>
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Resultados de busqueda para el autor:</u> "{{autor}}"</h1>
+    {% if libros %}
+    <ul>
+        {% for libro in libros%}
+        <li>{{libro}}</li>
+        {% endfor%}
+    </ul>
+        {% else %}
+            <p>No se encontraron resultados para el autor: "{{autor}}"</p>
+    {%endif%}
+{% endblock %}
+</body>
+</html> 

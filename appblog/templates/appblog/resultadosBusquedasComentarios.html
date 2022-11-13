@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Resultados de busqueda de comentarios de:</u> {{creador}}</h1>
+    {% if creador %}
+    <ul>
+        {% for comentario in comentarios %}
+        <li>El comentario creado por {{comentario.creador}} "{{comentario.texto}}" esta en este blog desde el dia: {{comentario.fechaCreacion}}</li>
+        {% endfor%}
+    </ul>
+        {% else %}
+            <p>Usuario NO Registrado en el blog o sin comentarios</p>
+    {%endif%}
+{% endblock %}
+</body>
+</html> 

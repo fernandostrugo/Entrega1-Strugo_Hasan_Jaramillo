@@ -1,0 +1,26 @@
+{% extends "appblog/base.html" %}
+{%block title%}
+<title>Editar Libros</title> 
+{%endblock%}
+{% block main_content%}
+<body>
+    <h1>Libros y Autores</h1>
+    <ul>
+        {% for libro in object_list %}
+            <li>
+                <p>Titulo: {{ libro.titulo }} </p>
+                <p>
+                    <a style="color:#FF0000" href="{% url 'Detail' libro.id %}">Ver<a/>
+                    <a style="color:#FF0000" href="{% url 'Edit' libro.id %}">Editar<a/>  
+                    <a style="color:#FF0000" href="{% url 'Delete' libro.id %}">Borrar<a/>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a style="color:#FF0000" href="{% url 'List' %}">Regresar</a>
+    </p>
+</body>
+
+</html>
+{% endblock %}

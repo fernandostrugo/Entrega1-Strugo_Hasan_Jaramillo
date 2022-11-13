@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Resultados de busqueda para el nickname:</u> "{{nickname}}"</h1>
+    {% if usuarios %}
+    <ul>
+        {% for usuario in usuarios %}
+        <li>El usuario {{usuario.nickname}} es miembro de este blog desde el dia: {{usuario.fechaRegistro}}</li>
+        {% endfor%}
+    </ul>
+        {% else %}
+            <p>No se encontraron resultados para el Nickname: "{{nickname}}"</p>
+    {%endif%}
+{% endblock %}
+</body>
+</html> 

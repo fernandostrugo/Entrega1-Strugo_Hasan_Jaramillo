@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+
+    <h1><u>Buscar Usuario por Nickname:</u></h1>
+
+    <form action="/appblog/buscarUsuario/" method="GET" >
+        <input type="text" name="nickname">
+        <input type="submit" value="Buscar" >
+    </form>
+    
+        <hr style="border-color:black;">
+        <br>
+{% endblock %}
+</body>
+</html> 

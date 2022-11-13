@@ -1,0 +1,18 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+
+    <h1><u>Buscar Comentario por creador:</u></h1>
+
+    <form action="/appblog/buscarComentario/" method="GET" >
+        <input type="text" name="creador">
+        <input type="submit" value="Buscar" >
+    </form>
+    
+        <hr style="border-color:black;">
+        <br>
+{% endblock %}
+</body>
+</html> 

@@ -1,0 +1,20 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+<body>
+    <h1>Formulario - Editar Perfil</h1>
+    <h1>De "{{user}}"</h1>
+
+    <form action={% url 'EditarPerfil' %} method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        <table>
+            {{formulario}}
+        </table>
+        <button>Editar</button>
+
+    </form>
+
+</body>
+
+</html>
+{% endblock %}

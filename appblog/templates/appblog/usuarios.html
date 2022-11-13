@@ -1,0 +1,21 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+
+<body>
+    <h1><u>Lista de comentaristas registrados:</u></h1>
+    
+    {% for user in users %}
+        <p>Nombre completo: {{user.nombre}}  {{user.apellido}} </p> 
+        <p>DNI:{{user.dni}} </p>
+        <p>Alias:{{user.nickname}} </p>   
+        <p>email:{{user.email}} </p>
+        <p>Usuario desde:{{user.fechaRegistro}} </p>
+        <hr/>
+        <br>
+    {% endfor %}
+
+{% endblock %}
+</body>
+
+</html> 

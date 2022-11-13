@@ -1,0 +1,19 @@
+{% extends "appblog/base.html" %}
+
+{% block main_content%}
+<body>
+    <p>Titulo del libro: <i>{{ libro.titulo}}</i></p>
+    <p>Autor: <i>{{ libro.autor}}</i></p>
+    <p>Genero: <i>{{ libro.genero}}</i></p>
+    <p>Fecha de ingreso: <i>{{ libro.fechaIngreso}}</i></p>
+    <p>
+        <a href="{% url 'List' %}">Regresar</a>
+    </p>
+
+
+
+
+</body>
+
+</html>
+{% endblock %}
